@@ -12,7 +12,7 @@ const convert = (amount, from, to) => {
   return Number.parseFloat(amountInFromUnit.div(units.getUnit(to)));
 };
 
-class Flax {
+class Chialite {
   constructor(value, unit) {
     this._value = value;
     this._unit = unit;
@@ -73,42 +73,42 @@ class Flax {
   }
 }
 
-export const flax_formatter = (value, unit) => new Flax(value, unit);
+export const chialite_formatter = (value, unit) => new Chialite(value, unit);
 
-flax_formatter.convert = convert;
-flax_formatter.setDisplay = units.setDisplay;
-flax_formatter.setUnit = units.setUnit;
-flax_formatter.getUnit = units.getUnit;
-flax_formatter.setFiat = (currency, rate, display = null) => {
+chialite_formatter.convert = convert;
+chialite_formatter.setDisplay = units.setDisplay;
+chialite_formatter.setUnit = units.setUnit;
+chialite_formatter.getUnit = units.getUnit;
+chialite_formatter.setFiat = (currency, rate, display = null) => {
   units.setUnit(currency, 1 / rate, display);
 };
 
-export const mojo_to_flax = (mojo) => {
-  return flax_formatter(Number.parseInt(mojo), 'mojo').to('flax').value();
+export const mojo_to_chialite = (mojo) => {
+  return chialite_formatter(Number.parseInt(mojo), 'mojo').to('chialite').value();
 };
 
-export const flax_to_mojo = (flax) => {
-  return flax_formatter(Number.parseFloat(Number(flax)), 'flax')
+export const chialite_to_mojo = (chialite) => {
+  return chialite_formatter(Number.parseFloat(Number(chialite)), 'chialite')
     .to('mojo')
     .value();
 };
 
-export const mojo_to_flax_string = (mojo) => {
-  return flax_formatter(Number(mojo), 'mojo').to('flax').toString();
+export const mojo_to_chialite_string = (mojo) => {
+  return chialite_formatter(Number(mojo), 'mojo').to('chialite').toString();
 };
 
 export const mojo_to_colouredcoin = (mojo) => {
-  return flax_formatter(Number.parseInt(mojo), 'mojo')
+  return chialite_formatter(Number.parseInt(mojo), 'mojo')
     .to('colouredcoin')
     .value();
 };
 
 export const colouredcoin_to_mojo = (colouredcoin) => {
-  return flax_formatter(Number.parseFloat(Number(colouredcoin)), 'colouredcoin')
+  return chialite_formatter(Number.parseFloat(Number(colouredcoin)), 'colouredcoin')
     .to('mojo')
     .value();
 };
 
 export const mojo_to_colouredcoin_string = (mojo) => {
-  return flax_formatter(Number(mojo), 'mojo').to('colouredcoin').toString();
+  return chialite_formatter(Number(mojo), 'mojo').to('colouredcoin').toString();
 };

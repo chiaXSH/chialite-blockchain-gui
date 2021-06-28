@@ -2,8 +2,8 @@ const units = require("../../util/units");
 
 describe("units", () => {
   describe("#getUnit", () => {
-    it("gets unit of flax", () => {
-      const result = units.getUnit("flax");
+    it("gets unit of chialite", () => {
+      const result = units.getUnit("chialite");
 
       expect(result).toBe(1);
     });
@@ -18,11 +18,11 @@ describe("units", () => {
       expect(result).toBe(1e-9);
     });
     it("supports uppercase characters", () => {
-      const result = units.getUnit("FLAX");
+      const result = units.getUnit("CHIALITE");
 
       expect(result).toBe(1);
     });
-    it("gets unit of flax using alias", () => {
+    it("gets unit of chialite using alias", () => {
       const result = units.getUnit("ch");
 
       expect(result).toBe(1);
@@ -46,8 +46,8 @@ describe("units", () => {
     });
   });
   describe("#getDisplay", () => {
-    it("gets display of flax", () => {
-      const result = units.getDisplay("flax");
+    it("gets display of chialite", () => {
+      const result = units.getDisplay("chialite");
 
       expect(result).toEqual({
         format: "{amount} CH",
@@ -87,13 +87,13 @@ describe("units", () => {
       expect(result).toEqual(1);
     });
     it("modifies an existing unit", () => {
-      units.setUnit("flax", 9);
+      units.setUnit("chialite", 9);
 
-      const result = units.getUnit("flax");
+      const result = units.getUnit("chialite");
 
       expect(result).toEqual(9);
 
-      units.setUnit("flax", 1);
+      units.setUnit("chialite", 1);
     });
   });
   describe("#setDisplay", () => {
@@ -111,12 +111,12 @@ describe("units", () => {
       });
     });
     it("updates an existing display", () => {
-      units.setDisplay("flax", {
+      units.setDisplay("chialite", {
         format: "{amount} TXCH",
         fractionDigits: 0
       });
 
-      const result = units.getDisplay("flax");
+      const result = units.getDisplay("chialite");
 
       expect(result).toEqual({
         format: "{amount} TXCH",

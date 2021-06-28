@@ -14,7 +14,7 @@ import {
   FormatBytes,
   FormatConnectionStatus,
   Card,
-} from '@flax/core';
+} from '@chialite/core';
 import Connection from '../../types/Connection';
 import type { RootState } from '../../modules/rootReducer';
 import FarmCloseConnection from './FarmCloseConnection';

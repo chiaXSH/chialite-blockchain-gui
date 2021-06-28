@@ -9,8 +9,8 @@ import {
   Loading,
   StateColor,
   Table,
-} from '@flax/core';
-import { Status } from '@flax/icons';
+} from '@chialite/core';
+import { Status } from '@chialite/icons';
 import { useRouteMatch, useHistory } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import { Box, Grid, Tooltip, Typography } from '@material-ui/core';

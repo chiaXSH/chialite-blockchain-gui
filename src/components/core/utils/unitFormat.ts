@@ -8,8 +8,8 @@ type Options = {
 };
 
 const defaultOptions = {
-  to: Unit.FLAX,
-  from: Unit.FLAX,
+  to: Unit.CHIALITE,
+  from: Unit.CHIALITE,
 };
 
 export default function unitFormat(value: number, options: Options): string {

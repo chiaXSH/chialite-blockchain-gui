@@ -6,23 +6,23 @@ const lodash = require('lodash');
 
 // defaults used in case of error point to the localhost daemon & its certs
 let self_hostname = 'localhost';
-global.daemon_rpc_ws = `wss://${self_hostname}:56600`;
+global.daemon_rpc_ws = `wss://${self_hostname}:59600`;
 global.cert_path = 'config/ssl/daemon/private_daemon.crt';
 global.key_path = 'config/ssl/daemon/private_daemon.key';
 
 function loadConfig(net) {
   try {
-    // check if FLAX_ROOT is set. it overrides 'net'
+    // check if CHIALITE_ROOT is set. it overrides 'net'
     const config_root_dir =
-      'FLAX_ROOT' in process.env
-        ? process.env.FLAX_ROOT
-        : path.join(os.homedir(), '.flax', net);
+      'CHIALITE_ROOT' in process.env
+        ? process.env.CHIALITE_ROOT
+        : path.join(os.homedir(), '.chialite', net);
     const config = yaml.load(
       fs.readFileSync(path.join(config_root_dir, 'config/config.yaml'), 'utf8'),
     );
 
     self_hostname = lodash.get(config, 'ui.daemon_host', 'localhost'); // jshint ignore:line
-    const daemon_port = lodash.get(config, 'ui.daemon_port', 56600); // jshint ignore:line
+    const daemon_port = lodash.get(config, 'ui.daemon_port', 59600); // jshint ignore:line
 
     // store these in the global object so they can be used by both main and renderer processes
     global.daemon_rpc_ws = `wss://${self_hostname}:${daemon_port}`;

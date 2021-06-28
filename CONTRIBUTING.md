@@ -1,15 +1,15 @@
 # Introduction
 
-Welcome to the flax-blockchain project!
-We are happy that you are taking a look at the code for Flax, a proof of space and time cryptocurrency.
+Welcome to the chialite-blockchain project!
+We are happy that you are taking a look at the code for Chialite, a proof of space and time cryptocurrency.
 
 A lot of fascinating new cryptography and blockchain concepts are used and implemented here.
-This repo includes the code for the Flax GUI in electron/react and TypeScript.
+This repo includes the code for the Chialite GUI in electron/react and TypeScript.
 
-It is an input to the [flax-blockchain](https://github.com/Flax-Network/flax-blockchain) repository which also includes a verifiable delay function implementation that it imports from the [chiavdf repo](https://github.com/Flax-Network/chiavdf) (in c/c++), and a proof of space implementation that it imports from the [chiapos repo](https://github.com/Flax-Network/chiapos). BLS signatures are imported from the [bls-signatures repo](https://github.com/Flax-Network/bls-signatures) as blspy. There is an additional dependency on the [chiabip158 repo](https://github.com/Flax-Network/chiabip158).
-For major platforms, binary and source wheels are shipped to PyPI from each dependent repo and then flax-blockchain can pip install those from PyPI or they can be prepackaged as is done for the Windows and MacOS installer. On unsupported platforms, pip will fall back to the source distributions to be compiled locally.
+It is an input to the [chialite-blockchain](https://github.com/Chialite-Network/chialite-blockchain) repository which also includes a verifiable delay function implementation that it imports from the [chiavdf repo](https://github.com/Chialite-Network/chiavdf) (in c/c++), and a proof of space implementation that it imports from the [chiapos repo](https://github.com/Chialite-Network/chiapos). BLS signatures are imported from the [bls-signatures repo](https://github.com/Chialite-Network/bls-signatures) as blspy. There is an additional dependency on the [chiabip158 repo](https://github.com/Chialite-Network/chiabip158).
+For major platforms, binary and source wheels are shipped to PyPI from each dependent repo and then chialite-blockchain can pip install those from PyPI or they can be prepackaged as is done for the Windows and MacOS installer. On unsupported platforms, pip will fall back to the source distributions to be compiled locally.
 
-If you want to learn more about this project, read the [wiki](https://github.com/Flax-Network/flax-blockchain/wiki), or check out the [green paper](https://www.flaxnetwork.org/assets/FlaxGreenPaper.pdf).
+If you want to learn more about this project, read the [wiki](https://github.com/Chialite-Network/chialite-blockchain/wiki), or check out the [green paper](https://www.chialitenetwork.org/assets/ChialiteGreenPaper.pdf).
 
 ## Contributions
 

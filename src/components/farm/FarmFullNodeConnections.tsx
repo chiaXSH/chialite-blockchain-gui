@@ -10,7 +10,7 @@ import {
   Card,
   FormatBytes,
   FormatConnectionStatus,
-} from '@flax/core';
+} from '@chialite/core';
 import Connection from '../../types/Connection';
 import type { RootState } from '../../modules/rootReducer';
 import FarmCloseConnection from './FarmCloseConnection';
@@ -90,7 +90,7 @@ export default function FarmFullNodeConnections() {
       tooltip={(
         <Trans>
           {'The full node that your farmer is connected to is below. '}
-          <Link target="_blank" href="https://github.com/Flax-Network/flax-blockchain/wiki/Network-Architecture">
+          <Link target="_blank" href="https://github.com/Chialite-Network/chialite-blockchain/wiki/Network-Architecture">
             Learn more
           </Link>
         </Trans>

@@ -14,16 +14,16 @@ function getInstallerConfig () {
   const outPath = path.join(rootPath, 'release-builds')
 
   return Promise.resolve({
-    appDirectory: path.join(rootPath, 'Flax-win32-x64'),
-    authors: 'Flax Network',
-    version: process.env.FLAX_INSTALLER_VERSION,
+    appDirectory: path.join(rootPath, 'Chialite-win32-x64'),
+    authors: 'Chialite Network',
+    version: process.env.CHIALITE_INSTALLER_VERSION,
     noMsi: true,
-    iconUrl: 'https://raw.githubusercontent.com/Flax-Network/flax-blockchain/master/electron-react/src/assets/img/flax.ico',
+    iconUrl: 'https://raw.githubusercontent.com/Chialite-Network/chialite-blockchain/master/electron-react/src/assets/img/chialite.ico',
     outputDirectory: path.join(outPath, 'windows-installer'),
     certificateFile: 'win_code_sign_cert.p12',
     certificatePassword: process.env.WIN_CODE_SIGN_PASS,
-    exe: 'Flax.exe',
-    setupExe: 'FlaxSetup-' + process.env.FLAX_INSTALLER_VERSION + '.exe',
-    setupIcon: path.join(rootPath, 'src', 'assets', 'img', 'flax.ico')
+    exe: 'Chialite.exe',
+    setupExe: 'ChialiteSetup-' + process.env.CHIALITE_INSTALLER_VERSION + '.exe',
+    setupIcon: path.join(rootPath, 'src', 'assets', 'img', 'chialite.ico')
   })
 }
